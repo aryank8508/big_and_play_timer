@@ -35,11 +35,11 @@ const job = schedule.scheduleJob("0 1 * * *", async function () {
   try {
     // Make the API call using axios
     const response = await axios.get(
-      "https://admin.righttime.fun/api/wallet-income"
+      "https://admin.bigandplay.com/api/wallet-income"
     );
     setTimeout(async () => {
       try {
-        await axios.get("https://admin.righttime.fun/api/bet-income");
+        await axios.get("https://admin.bigandplay.com/api/bet-income");
       } catch (e) {
         console.log(e);
       }
@@ -47,7 +47,7 @@ const job = schedule.scheduleJob("0 1 * * *", async function () {
 
     setTimeout(async () => {
       try {
-        await axios.get("https://admin.righttime.fun/api/direct-income");
+        await axios.get("https://admin.bigandplay.com/api/direct-income");
       } catch (e) {
         console.log(e);
       }
@@ -157,7 +157,7 @@ const oneMinRolletResult = async () => {
 const oneMinColorWinning = async () => {
   try {
     await axios.get(
-      `https://admin.righttime.fun/api/colour_winning?id=1&gid=1`
+      `https://admin.bigandplay.com/api/colour_winning?id=1&gid=1`
     );
   } catch (e) {
     console.log(e);
@@ -186,7 +186,7 @@ const generatedTimeEveryAfterEveryThreeMin = () => {
 
 const oneMinCheckResult2min = async () => {
   try {
-    await axios.get(`https://admin.righttime.fun/api/checkresult`);
+    await axios.get(`https://admin.bigandplay.com/api/checkresult`);
   } catch (e) {
     console.log(e);
   }
@@ -194,7 +194,7 @@ const oneMinCheckResult2min = async () => {
 const oneMinColorWinning2min = async () => {
   try {
     await axios.get(
-      `https://admin.righttime.fun/api/colour_winning?id=2&gid=2`
+      `https://admin.bigandplay.com/api/colour_winning?id=2&gid=2`
     );
   } catch (e) {
     console.log(e);
@@ -227,7 +227,7 @@ const generatedTimeEveryAfterEveryFiveMin = () => {
 
 const oneMinCheckResult3sec = async () => {
   try {
-    await axios.get(`https://admin.righttime.fun/api/checkresult`);
+    await axios.get(`https://admin.bigandplay.com/api/checkresult`);
   } catch (e) {
     console.log(e);
   }
@@ -235,7 +235,7 @@ const oneMinCheckResult3sec = async () => {
 const oneMinColorWinning3sec = async () => {
   try {
     await axios.get(
-      `https://admin.righttime.fun/api/colour_winning?id=3&gid=3`
+      `https://admin.bigandplay.com/api/colour_winning?id=3&gid=3`
     );
   } catch (e) {
     console.log(e);
@@ -296,7 +296,7 @@ function generatedTimeEveryAfterEveryOneMinTRX() {
             //  trx 1
             try {
               const response = await axios.post(
-                "https://admin.righttime.fun/api/insert-one-trx",
+                "https://admin.bigandplay.com/api/insert-one-trx",
                 fd
               );
             } catch (e) {
@@ -304,7 +304,7 @@ function generatedTimeEveryAfterEveryOneMinTRX() {
             }
             try {
               const response = await axios.get(
-                `https://admin.righttime.fun/api/trx-winning-result?number=${num}&gameid=1`
+                `https://admin.bigandplay.com/api/trx-winning-result?number=${num}&gameid=1`
               );
             } catch (e) {
               console.log(e);
@@ -353,7 +353,7 @@ const generatedTimeEveryAfterEveryThreeMinTRX = () => {
             //  trx 3
             try {
               const response = await axios.post(
-                "https://admin.righttime.fun/api/insert-three-trx",
+                "https://admin.bigandplay.com/api/insert-three-trx",
                 fd
               );
             } catch (e) {
@@ -361,7 +361,7 @@ const generatedTimeEveryAfterEveryThreeMinTRX = () => {
             }
             try {
               const response = await axios.get(
-                `https://admin.righttime.fun/api/trx-winning-result?number=${num}&gameid=2`
+                `https://admin.bigandplay.com/api/trx-winning-result?number=${num}&gameid=2`
               );
             } catch (e) {
               console.log(e);
@@ -414,7 +414,7 @@ const generatedTimeEveryAfterEveryFiveMinTRX = () => {
             //  trx 3
             try {
               const response = await axios.post(
-                "https://admin.righttime.fun/api/insert-five-trx",
+                "https://admin.bigandplay.com/api/insert-five-trx",
                 fd
               );
             } catch (e) {
@@ -422,7 +422,7 @@ const generatedTimeEveryAfterEveryFiveMinTRX = () => {
             }
             try {
               const response = await axios.get(
-                `https://admin.righttime.fun/api/trx-winning-result?number=${num}&gameid=3`
+                `https://admin.bigandplay.com/api/trx-winning-result?number=${num}&gameid=3`
               );
             } catch (e) {
               console.log(e);
@@ -469,7 +469,7 @@ let trx = true;
 // }
 
 if (x) {
-  generateAndSendMessage();
+  // generateAndSendMessage();
   console.log("Waiting for the next minute to start...");
   const now = new Date();
   const secondsUntilNextMinute = 60 - now.getSeconds();
